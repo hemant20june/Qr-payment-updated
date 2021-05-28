@@ -1,0 +1,19 @@
+<mat-card>
+
+  <form [formGroup] = "frmStepTwo">
+
+    <app-scanner  (getQrResult)="getQrResultHandler($event)" [buttonLabel]="buttonLabel"></app-scanner>
+
+     <!-- <mat-form-field>
+      <input matInput placeholder="MerchantDetail" formControlName="qrResult" matInput required>
+    </mat-form-field> -->
+
+    {{result}}
+
+    <mat-card-actions>
+      <button mat-raised-button matStepperNext class="nav-btn pull-right">next</button>
+    </mat-card-actions>
+
+  </form>
+
+</mat-card>
